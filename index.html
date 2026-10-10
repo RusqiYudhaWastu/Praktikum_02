@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Pemesanan Barang - Kelompok 15</title>
+</head>
+<body>
+    <br><br>
+    <form action="hasil_pemesanan.html" method="POST" enctype="multipart/form-data">
+        
+        <!-- Tabel Utama Pembungkus Seluruh Form (Border 1 agar batas kolom terlihat) -->
+        <table border="1" width="85%" align="center" cellpadding="0" cellspacing="0">
+            
+            <!-- Bagian Header (Judul Form) -->
+            <tr>
+                <td colspan="2" align="center" height="60">
+                    <font size="6" face="Arial"><b>FORMULIR PEMESANAN</b></font>
+                </td>
+            </tr>
+            
+            <!-- Bagian Konten Kiri & Kanan -->
+            <tr>
+                <!-- KOLOM KIRI: Detail Barang -->
+                <td width="50%" valign="top">
+                    <table border="0" width="100%" cellpadding="20">
+                        <tr>
+                            <td>
+                                <font size="4" face="Arial"><b>Detail Barang</b></font>
+                                <hr>
+                                <br>
+                                <table border="0" width="100%" cellpadding="7">
+                                    <tr>
+                                        <td width="30%" valign="top"><font face="Arial"><b>Gambar</b></font></td>
+                                        <td>
+                                            <table border="1" width="150" height="150" cellpadding="0" cellspacing="0">
+                                                <tr>
+                                                    <td align="center" valign="middle">
+                                                        <img src="assets/img/mac.jpg" width="100" height="150" alt="Foto Barang">
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                            <br>
+                                            <input type="file" name="foto_barang" accept="image/*">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><font face="Arial"><b>Nama Barang</b></font></td>
+                                        <td><input type="text" name="nama_barang" value="MacBook Air M1" size="30"></td>
+                                    </tr>
+                                    <tr>
+                                        <td valign="top"><font face="Arial"><b>Deskripsi</b></font></td>
+                                        <td>
+                                            <textarea name="deskripsi" rows="5" cols="32">Tahun : 2020
+                                                                       Model : M1 8/256GB
+                                                                             Kondisi : Mulus</textarea>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td valign="top"><font face="Arial"><b>Tabel Harga</b></font></td>
+                                        <td>
+                                            <!-- Tabel Harga Tambahan -->
+                                            <table border="1" width="100%" cellpadding="5" cellspacing="0">
+                                                <tr>
+                                                    <td><font face="Arial">Harga Satuan</font></td>
+                                                    <td align="right"><font face="Arial">Rp 12.000.000</font></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><font face="Arial">Biaya Layanan</font></td>
+                                                    <td align="right"><font face="Arial">Rp 50.000</font></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><font face="Arial"><b>Total Biaya</b></font></td>
+                                                    <td align="right"><font face="Arial"><b>Rp 12.050.000</b></font></td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+
+                <!-- KOLOM KANAN: Transaksi dan Kontak -->
+                <td width="50%" valign="top">
+                    <table border="0" width="100%" cellpadding="20">
+                        <tr>
+                            <td>
+                                <font size="4" face="Arial"><b>Transaksi & Akun</b></font>
+                                <hr>
+                                <br>
+                                <table border="0" width="100%" cellpadding="7">
+                                    <tr>
+                                        <td width="40%"><font face="Arial"><b>Nomor Rekening</b></font></td>
+                                        <td><input type="text" name="nomor_rekening" value="123-456-789-0" size="30"></td>
+                                    </tr>
+                                    <tr>
+                                        <td><font face="Arial"><b>Bank</b></font></td>
+                                        <td>
+                                            <select name="bank">
+                                                <option>HSBC</option>
+                                                <option>BCA</option>
+                                                <option>Mandiri</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><font face="Arial"><b>Pemilik Rekening</b></font></td>
+                                        <td><input type="text" name="pemilik_rekening" value="Rusqi Yudha Wastu" size="30"></td>
+                                    </tr>
+                                    <tr>
+                                        <td valign="top"><font face="Arial"><b>Jumlah Transaksi :</b></font></td>
+                                        <td>
+                                            <select name="jumlah_transaksi">
+                                                <option>1</option>
+                                                <option>2</option>
+                                                <option>3</option>
+                                            </select><br>
+                                            <i><font size="2" face="Arial">* Jika transaksi untuk 3 orang, pilih 3 dari daftar drop-down</font></i><br><br>
+                                            <input type="checkbox" name="kirim_hp" checked> <font face="Arial">Kirim ke Nomor HP</font><br>
+                                            <input type="checkbox" name="kirim_email" checked> <font face="Arial">Kirim ke Email</font>
+                                        </td>
+                                    </tr>
+                                </table>
+
+                                <br><br>
+                                <font size="4" face="Arial"><b>Kontak Notifikasi</b></font>
+                                <hr>
+                                <br>
+                                <table border="0" width="100%" cellpadding="7">
+                                    <tr>
+                                        <td width="40%"><font face="Arial"><b>Kirim ke Nomor HP</b></font></td>
+                                        <td><input type="text" name="nomor_hp" value="081234567890" size="30"></td>
+                                    </tr>
+                                    <tr>
+                                        <td><font face="Arial"><b>Kirim ke Email</b></font></td>
+                                        <td><input type="text" name="email" value="rusqi@example.com" size="30"></td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+
+            <!-- Bagian Footer (Tombol Submit) -->
+            <tr>
+                <td colspan="2" align="center" height="70">
+                    <button type="submit"><b>Buat Tautan Web</b></button>
+                </td>
+            </tr>
+        </table>
+    </form>
+    
+    <br>
+    <br><br>
+</body>
+</html>
